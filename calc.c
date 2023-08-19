@@ -1,30 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <wchar.h>                      // Permite o uso do 'wprintf'
+#include <wchar.h>                          // Permite o uso do 'wprintf'
 #include <locale.h>
 
-float soma(float a, float b)
+float soma(float a, float b)                // Soma
 {
-    return 0;
+    float soma = a + b;
+
+    return soma;
 }
 
-float subtracao(float a, float b)
+float subtracao(float a, float b)           // Subtração
 {
-    return 0;
+    float sub = a - b;
+
+    return sub;
 }
 
-float multiplicacao(float a, float b)
+float multiplicacao(float a, float b)       // Multiplicação
 {
-    return 0;
+    float mult = a * b;
+
+    return mult;
 }
 
-float divisao(float a, float b)
+float divisao(float a, float b)             // Divisão
 {
-    return 0;
+    float div = a / b;
+
+    return div;
 }
 
 int main()
 {
+    system("cls");                          // Inicia a calculadora
+
     char variavel, sair;
     float valor1, valor2, resultado;
     setlocale(LC_ALL, "Portuguese");
