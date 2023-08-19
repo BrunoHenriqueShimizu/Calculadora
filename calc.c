@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <wchar.h>                      // Permite o uso do 'wprintf'
+#include <locale.h>
 
 float soma(float a, float b)
 {
@@ -25,6 +27,7 @@ int main()
 {
     char variavel, sair;
     float valor1, valor2, resultado;
+    setlocale(LC_ALL, "Portuguese");
 
     do
     {
@@ -36,7 +39,7 @@ int main()
         printf("\n=========Bem-vindo!==========\n");
         printf("-----------------------------");
 
-        printf("\n\nDigite a operação que deseja realizar utilizando este formato (x + y), com essas variáveis --> (+,-,*,/)\n");
+        wprintf(L"\n\nDigite a operação que deseja realizar utilizando este formato (x + y), com essas variáveis --> (+,-,*,/)\n");     // Usa o wprintf pra corrigir o bug de caracteres no vs code
         scanf("%f %c %f", &valor1, &variavel, &valor2);
 
         switch (variavel)
